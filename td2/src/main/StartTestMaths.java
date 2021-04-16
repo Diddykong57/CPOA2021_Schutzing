@@ -7,6 +7,6 @@ public class StartTestMaths {
 
 	public static void main(String[] args) {
 		IMaths maths = new Maths();
-        System.out.println(maths.addition(2, 3));
+        System.out.println(maths.addition(1, 2));
 	}
 }
