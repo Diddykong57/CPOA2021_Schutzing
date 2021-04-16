@@ -41,4 +41,45 @@ public class MathsTest {
     public void testSoustractionNbNegatif() {
         Assert.assertEquals(maths.soustraction(-6, -7), 1);
     }
+    
+    @Test
+    public void testSoustractionCasGeneralNombreNegatif() {
+        Assert.assertEquals(maths.soustraction(-5, -3), -2);
+    }
+
+    @Test
+    public void testSoustractionCasGeneralNombrePositifEtNegatif() {
+        Assert.assertEquals(maths.soustraction(2, -3), 5);
+    }
+
+    @Test
+    public void testMultiplicationCasGeneralNombrePositif() {
+        Assert.assertEquals(maths.multiplication(2, 3), 6);
+    }
+
+    @Test
+    public void testMultiplicationCasGeneralNombreNegatif() {
+        Assert.assertEquals(maths.multiplication(-2, -3), 6);
+    }
+
+    @Test
+    public void testMultiplicationCasGeneralNombrePositifetNegatif() {
+        Assert.assertEquals(maths.multiplication(-2, 3), -6);
+    }
+
+    @Test
+    public void testDivisionCasGeneralNombrePositif() throws MathsExceptions {
+        Assert.assertEquals(maths.division(28, 7), 4, 0);
+    }
+
+    @Test(expected = MathsExceptions.class)
+    public void testDivisionParZero() throws MathsExceptions {
+        try {
+            maths.division(4, 0);
+        }
+        catch (MathsExceptions me) {
+            Assert.assertEquals(me.getMessage(), "Division par zéro impossible");
+            throw me;
+        }
+    }
 }
