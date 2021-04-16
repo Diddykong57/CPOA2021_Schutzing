@@ -17,7 +17,48 @@ public class Maths implements IMaths {
 
 	@Override
 	public int multiplication(int a, int b) {
-		return a * b;
+		int i;
+		
+		if (0 < a && 0 < b) {
+			i = b;
+			a--;
+			while (a != 0) {
+				b += i;
+				a--;
+			}
+			
+		} else if (0 > a && 0 > b){
+			i = b;
+			a++;
+			while (a != 0) {
+				b += i;
+				a++;
+			}
+			b = Math.abs(b);
+			
+		} else if ((0 > a && 0 < b) || (0 < a && 0 > b)){
+			i = b;
+			if (a < 0) {
+				a++;
+				while (a != 0) {
+					b += i;
+					a++;
+				}
+				b = -b;
+				
+			} else {
+				a--;
+				while (a != 0) {
+					b += i;
+					a--;
+				}
+			}
+			
+		} else {
+			b = 0;
+		}
+		
+		return b;
 	}
 
 	@Override

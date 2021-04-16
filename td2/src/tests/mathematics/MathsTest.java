@@ -66,6 +66,17 @@ public class MathsTest {
     public void testDivisionNbPositif() throws MathsExceptions {
         Assert.assertEquals(maths.division(12, 4), 3, 0);
     }
+    
+    @Test
+    public void testDivisionNbNegatif() throws MathsExceptions {
+        Assert.assertEquals(maths.division(-15, -3), 5, 0);
+    }
+    
+    @Test
+    public void testDivisionNbPositifetNegatif() throws MathsExceptions {
+        Assert.assertEquals(maths.division(-12, 4), -3, 0);
+    }
+
 
     @Test(expected = MathsExceptions.class)
     public void testDivisionParZero() throws MathsExceptions {
