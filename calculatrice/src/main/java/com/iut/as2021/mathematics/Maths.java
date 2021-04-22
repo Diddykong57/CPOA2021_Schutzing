@@ -1,7 +1,7 @@
-package mathematics;
+package com.iut.as2021.mathematics;
 
-import exceptions.MathsExceptions;
-import interfaces.IMaths;
+import com.iut.as2021.exceptions.*;
+import com.iut.as2021.interfaces.*;
 
 public class Maths implements IMaths {
 
@@ -64,7 +64,7 @@ public class Maths implements IMaths {
 	@Override
     public double division(int a, int b) throws MathsExceptions {
         if (b == 0) {
-            throw new MathsExceptions("Division par zéro impossible");
+            throw new MathsExceptions("Division par zÃ©ro impossible");
         }
         try {
             return a / b;
@@ -72,5 +72,4 @@ public class Maths implements IMaths {
             throw new MathsExceptions(e.getMessage());
         }
     }
-
 }

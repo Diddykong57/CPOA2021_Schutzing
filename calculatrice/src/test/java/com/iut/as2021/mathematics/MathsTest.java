@@ -1,16 +1,16 @@
-package tests.mathematics;
+package com.iut.as2021.mathematics;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import exceptions.MathsExceptions;
-import interfaces.IMaths;
-import mathematics.Maths;
+import com.iut.as2021.interfaces.*;
+import com.iut.as2021.mathematics.*;
+import com.iut.as2021.exceptions.*;
 
 public class MathsTest {
 
-    private IMaths maths;
+	private IMaths maths;
 
     @Before
     public void setUp() {

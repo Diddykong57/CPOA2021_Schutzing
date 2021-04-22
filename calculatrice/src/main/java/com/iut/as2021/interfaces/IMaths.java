@@ -1,6 +1,6 @@
-package interfaces;
+package com.iut.as2021.interfaces;
 
-import exceptions.MathsExceptions;
+import com.iut.as2021.exceptions.*;
 
 public interface IMaths {
 

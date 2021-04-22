@@ -1,8 +1,8 @@
-package main;
+package com.iut.as2021.main;
 
-import exceptions.MathsExceptions;
-import interfaces.IMaths;
-import mathematics.Maths;
+import com.iut.as2021.interfaces.IMaths;
+import com.iut.as2021.mathematics.Maths;
+import com.iut.as2021.exceptions.MathsExceptions;
 
 public class StartTestMaths {
 
